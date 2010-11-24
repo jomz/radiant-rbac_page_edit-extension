@@ -7,7 +7,7 @@ module PagesControllerRoleExtensions
         :denied_message => "You aren't in an appropriate role for editing or adding children to that page."
 
       def user_is_in_page_role
-        return true if current_user.admin? || current_user.developer?
+        return true if current_user.admin? || current_user.developer? || current_user.designer?
   
         page = Page.find(params[:id] || params[:page_id] || params[:parent_id])
   
