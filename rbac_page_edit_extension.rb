@@ -20,8 +20,8 @@ class RbacPageEditExtension < Radiant::Extension
       end
     }
     Admin::PagesController.send :include, PagesControllerRoleExtensions
-    admin.pages.index.add :node, "page_role_td", :before => "status_column"
-    admin.pages.index.add :sitemap_head, "page_role_th", :before => "status_column_header"
+    #admin.pages.index.add :node, "page_role_td", :before => "status_column"
+    #admin.pages.index.add :sitemap_head, "page_role_th", :before => "status_column_header"
     admin.pages.edit.add :parts_bottom, "page_role", :after => "edit_timestamp"
   end
   
